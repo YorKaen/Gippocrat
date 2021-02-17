@@ -1,0 +1,62 @@
+-var adr1 = "ст.Ленинградская"
+-var adr2 = "ул. Победы, 70А"
+-var adr3 = "ул. 302 Дивизии, 30"
+-var tele1 = "+7 (861) 457-31-05"
+-var tele1_href = "tel:+78614573105"
+-var tele2 = "+7 (861) 457-31-04"
+-var tele2_href = "tel:+78614573104"
+-var tele3 = " +7 (861) 457-17-60"
+-var tele3_href = "tel:+78614571760"
+-var tele4 = "+7 (861) 457-04-23"
+-var tele4_href = "tel:+78614570423"
+-var shedule = "Пн-пт: 8-00 - 16-00, перерыв 13-00 - 14-00, Суббота: 8-00 - 12-00, Воскресенье: выходной, МРТ центр: без перерыва и выходных, 8-00 - 20-00"
+
+header.header
+  .container
+    .header__body.row
+      a(href="#").header__logo.logo.col-md-3.col-md1-2.col-md2-4
+        img(loading="lazy", src="img/logo.png", alt="Логотип Гиппократ")#logo
+        img(loading="lazy", src="img/logosm.png", alt="Логотип Гиппократ")#logosm
+      .header__adress.col-md-4
+        .adress__item
+          .plus 
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 32 32">
+            <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+            </svg>
+          .adress__txt.txt.bold=adr2
+          .adress__txt.txt=adr1
+        .adress__item
+          .plus 
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
+            <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+            </svg>
+          .adress__txt.txt.bold=adr3
+          .adress__txt=adr1
+      .header__phone.phone.col-md-4.col-md1-4
+        .phone__icon 
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 37">
+            <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAlCAYAAADBa/A+AAAB7UlEQVRYheWYTStFQRjHf16yUMpC3jZSFpJiL+UbuCLhA5BELL2EFFsvG7JxrZRSlnZIyk53ZUOkbl0voUtIRFNzaswcx9GZUyfnV8/i+c/cuf9mzjPNTM5I8wGSaqAKbz6BE+Das5cl8oECYA3o8TnkBzALTBktlskFxv5gTJAHTAIJoyWEmWs3VH90A3uW/bwDT04iZq5IaRwBcjxiUenbCdxbjkcgAww6Mxc1yoAlIJsbQXMO/UFm7hCYMNRgdAADcoTyIOZulYIQ21Gd0cMfaeBG9mxUf2Hrm6sEjg3VH6IIF9x6Rvmbi7a5sLaSBuDSUN15cVVDNJcFHgz1j8RiWcURqk3LA2PL3DOwbagBicWyFgPDSi421XKgS9GmgRYZyNPHijFSSObUk3ESqNU0x5yjpX4zF4tlfQX2tfxW0wQXinZqjBKSuYzyLXlpSRm+sGWuFFhV8l551RxVtIQsEKdIzuWJ5EdsmSsEWpVcVG6FpiGLxNFSxigasSiIrHYzE/mZpgmOFC1tjBKSuTttE/5J25Hhi3+7rCUuW0VQamyZawJ2DdUemSgv63IUzV0BQ8B6vnw8cZiX4YdNoM+ysW+vTMLcFlBvdPudDRuXGC/Ess7JP/KLeNmcCeNYriNm7k2+bI5H6k0Y+AIEum0FH5zxogAAAABJRU5ErkJggg=="/>
+        </svg>
+        .col
+          .phone__item
+            a.tele-link.bold(href=tele1_href)=tele1 
+            | ,
+          .phone__item 
+            a.tele-link.bold(href=tele2_href)=tele2 
+            | ,
+        .col
+          .phone__item
+            a.tele-link.bold(href=tele3_href)=tele3 
+          .phone__item
+            a.tele-link.bold(href=tele4_href)=tele4 
+      #bad-eye.header__bad-eye.col-md-2.js-btn
+        .bad-eye__icon
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 32 32">
+          <path d="M16 6c-6.979 0-13.028 4.064-16 10 2.972 5.936 9.021 10 16 10s13.027-4.064 16-10c-2.972-5.936-9.021-10-16-10zM23.889 11.303c1.88 1.199 3.473 2.805 4.67 4.697-1.197 1.891-2.79 3.498-4.67 4.697-2.362 1.507-5.090 2.303-7.889 2.303s-5.527-0.796-7.889-2.303c-1.88-1.199-3.473-2.805-4.67-4.697 1.197-1.891 2.79-3.498 4.67-4.697 0.122-0.078 0.246-0.154 0.371-0.228-0.311 0.854-0.482 1.776-0.482 2.737 0 4.418 3.582 8 8 8s8-3.582 8-8c0-0.962-0.17-1.883-0.482-2.737 0.124 0.074 0.248 0.15 0.371 0.228v0zM16 13c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+          </svg>
+        .bad-eye__txt.txt.bold Версия для слабовидящих
+  .header__footer.grey-footer
+    .container
+      .grey-footer__txt.txt=shedule
+  include ./_nav.pug
+  include ./_mobile.pug

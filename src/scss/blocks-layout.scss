@@ -1,0 +1,274 @@
+////////////Базовые классы
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -$padding-block;
+  margin-left: -$padding-block;
+}
+  ///контр марджин для корректно вставляемых колон 
+  /*row
+    col
+    col
+      row
+       col
+       col
+    col*/
+.col{
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  position:relative;
+  min-height:1px;
+  padding-left: $padding-block;
+  padding-right: $padding-block;
+}
+////////////Общие настройки
+.row >[class*="col-"]{
+  position:relative;
+  min-height:1px;
+  padding-left: $padding-block;
+  padding-right: $padding-block;
+}
+
+/* PC FIRST START *//* PC FIRST START *//* PC FIRST START *//* PC FIRST START *//* PC FIRST START */
+/////--md--////////md Станадртный размер шаблона
+.col-md{
+  &-12 {
+  width:100%
+  }
+  &-11 {
+  width:91.66666667%
+  }
+  &-10 {
+  width:83.33333333%
+  }
+  &-9 {
+  width:75%
+  }
+  &-8 {
+  width:66.66666667%;
+  float:left
+  }
+  &-7 {
+  width:58.33333333%;
+  float:left
+  }
+  &-6 {
+  width:50%;
+  float:left
+  }
+  &-5 {
+  width:41.66666667%;
+  float:left
+  }
+  &-4 {
+  width:33.33333333%;
+  float:left
+  }
+  &-3 {
+  width:25%;
+  float:left
+  }
+  &-2 {
+  width:16.66666667%
+  }
+  &-1 {
+  width:8.33333333%
+  }
+  &-005{
+  width: 5%;
+  }
+}
+/////--md1--////////md1 меньше чем md1
+.col-md1{
+  &-12 {
+  width:100%
+  }
+  &-11 {
+  width:91.66666667%
+  }
+  &-10 {
+  width:83.33333333%
+  }
+  &-9 {
+  width:75%
+  }
+  &-8 {
+  width:66.66666667%;
+  float:left
+  }
+  &-7 {
+  width:58.33333333%;
+  float:left
+  }
+  &-6 {
+  width:50%;
+  float:left
+  }
+  &-5 {
+  width:41.66666667%;
+  float:left
+  }
+  &-4 {
+  width:33.33333333%;
+  float:left
+  }
+  &-3 {
+  width:25%;
+  float:left
+  }
+  &-2 {
+  width:16.66666667%
+  }
+  &-1 {
+  width:8.33333333%
+  }
+  &-005{
+  width: 5%;
+  }
+}
+////--md2--/////////  Меньше чем md2 На средних экранах, планшетах
+@media (max-width: $md2+px){
+  .col-md2{
+    &-12 {
+    width:100%
+    }
+    &-11 {
+    width:91.66666667%
+    }
+    &-10 {
+    width:83.33333333%
+    }
+    &-9 {
+    width:75%
+    }
+    &-8 {
+    width:66.66666667%;
+    float:left
+    }
+    &-7 {
+    width:58.33333333%;
+    float:left
+    }
+    &-6 {
+    width:50%;
+    float:left
+    }
+    &-5 {
+    width:41.66666667%;
+    float:left
+    }
+    &-4 {
+    width:33.33333333%;
+    float:left
+    }
+    &-3 {
+    width:25%;
+    float:left
+    }
+    &-2 {
+    width:16.66666667%
+    }
+    &-1 {
+    width:8.33333333%
+    }
+  }
+}
+
+////--md3--/////////  Меньше чем md3 На телефонах горизонтально
+@media (max-width: $md3+px){
+  .col-md3{
+    &-12 {
+    width:100%
+    }
+    &-11 {
+    width:91.66666667%
+    }
+    &-10 {
+    width:83.33333333%
+    }
+    &-9 {
+    width:75%
+    }
+    &-8 {
+    width:66.66666667%;
+    float:left
+    }
+    &-7 {
+    width:58.33333333%;
+    float:left
+    }
+    &-6 {
+    width:50%;
+    float:left
+    }
+    &-5 {
+    width:41.66666667%;
+    float:left
+    }
+    &-4 {
+    width:33.33333333%;
+    float:left
+    }
+    &-3 {
+    width:25%;
+    float:left
+    }
+    &-2 {
+    width:16.66666667%
+    }
+    &-1 {
+    width:8.33333333%
+    }
+  }
+}
+////--md4--/////////  Меньше чем md4 до 340px
+@media (max-width: $md4+px){
+  .col-md4{
+    &-12 {
+    width:100%
+    }
+    &-11 {
+    width:91.66666667%
+    }
+    &-10 {
+    width:83.33333333%
+    }
+    &-9 {
+    width:75%
+    }
+    &-8 {
+    width:66.66666667%;
+    float:left
+    }
+    &-7 {
+    width:58.33333333%;
+    float:left
+    }
+    &-6 {
+    width:50%;
+    float:left
+    }
+    &-5 {
+    width:41.66666667%;
+    float:left
+    }
+    &-4 {
+    width:33.33333333%;
+    float:left
+    }
+    &-3 {
+    width:25%;
+    float:left
+    }
+    &-2 {
+    width:16.66666667%
+    }
+    &-1 {
+    width:8.33333333%
+    }
+  }
+}
+/* PC FIRST END *//* PC FIRST END *//* PC FIRST END *//* PC FIRST END *//* PC FIRST END *//* PC FIRST END */

@@ -1,0 +1,69 @@
+extends _layout.pug
+
+block meta
+  meta(name="title", content='Гиппократ')
+  meta(name="description", content='Многопрофильный медицинский центр')
+
+block preload
+    //- Предзагрузка шрифтов или иных ресурсов
+      link(rel='preload', href='fonts/EXO-2-Regular.woff2', as='font', type='font/woff2', crossorigin='anonymous')
+    //-link(rel="preload" href="css/style.min.css" as="style")
+    //-link(rel="preload" href="js/script.js" as="script")
+
+block styles
+    link(href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css")
+    link(href="css/style.min.css" rel="stylesheet" type="text/css")
+
+block scripts
+    //- Скрипты для загрузки в первую очередь
+    script(src="https://code.jquery.com/jquery-3.5.1.js", integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" , crossorigin="anonymous")
+    //-script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js")
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="js/script.js")
+
+block meta
+    title Главная
+    meta(name='description', content='')
+    //- Фавиконки (https://realfavicongenerator.net)
+    link(rel='apple-touch-icon', sizes='180x180', href='../img/favicon/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='../img/favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='../img/favicon/favicon-16x16.png')
+    link(rel='manifest', href='../img/favicon/site.webmanifest')
+    link(rel='mask-icon', href='../img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='msapplication-TileColor', content='#5bbad5')
+    meta(name='theme-color', content='#000')
+    meta(name='msapplication-navbutton-color', content='#000')
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    link(rel='shortcut icon' href='../img/favicon/favicon.ico' type='image/x-icon')
+
+block header
+  include ./_header.pug
+
+block content
+  .page
+    .page__fpbanner.fpbanner
+      .container-full
+        .fpbanner-slider.swiper-container
+          .fpbanner-slider__wrapper.swiper-wrapper
+            .fpbanner-slider__slide.slide-1.swiper-slide
+              .slide-1__container
+                .slide-1__col.col-md-6
+                  .slide-1__item.txt 
+                    span Результат за 
+                    span.bold 15 минут
+                  .slide-1__item.txt Все виды анализов на коронавирус
+                  .slide-1__item.txt COVID - 19
+                  .slide-1__item.txt Антитела lgM + lg G
+                  .slide-1__item.btn(href='#')
+                    .txt.js-btn Подробнее
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M9.005 4l8 8l-8 8L7 18l6.005-6L7 6z" fill-rule="evenodd"/></svg>
+                .col-md-6
+            .fpbanner-slider__slide.swiper-slide
+            .fpbanner-slider__slide.swiper-slide
+          .fpbanner-slider__prev.swiper-button-prev
+          .fpbanner-slider__next.swiper-button-next
+
+block load-last-scripts
+    //-Скрипты для загрузки в последнюю очередь, метрика и подобное
+      script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+    script(src="js/script.js")

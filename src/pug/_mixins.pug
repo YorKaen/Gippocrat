@@ -1,0 +1,29 @@
+mixin menu-item(name)
+  li
+    a.menu__item.txt(href="#")=name
+    block
+
+mixin sub(name)
+  li
+    a.sub-menu__item.txt(href="#")=name
+    block
+
+mixin subsub(name)
+  li
+    a.sub-sub-menu__item(href="#")=name
+    block
+
+mixin mobile-menu(name)
+  li.js__mobile-item
+    .mobile-menu__link=name
+    block
+
+mixin mobile-sub(name)
+  li.js__mobile-submenu
+    .mobile-submenu__link=name
+    block
+
+mixin mobile-subsub(name)
+  li.js__mobile-link
+    a.mobile-sub-submenu__link(href="#")=name
+    block

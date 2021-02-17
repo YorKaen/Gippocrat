@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta content="notranslate" name="google">
+    <title>Главная</title>
+    <meta name="description" content="">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#5bbad5">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__body row"><a class="header__logo logo col-md-3 col-md1-2 col-md2-4" href="#"><img loading="lazy" src="img/logo.png" alt="Логотип Гиппократ" id="logo"><img loading="lazy" src="img/logosm.png" alt="Логотип Гиппократ" id="logosm"></a>
+          <div class="header__adress col-md-4">
+            <div class="adress__item">
+              <div class="plus">
+                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 32 32">
+<path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+</svg>
+              </div>
+              <div class="adress__txt txt bold">ул. Победы, 70А</div>
+              <div class="adress__txt txt">ст.Ленинградская</div>
+            </div>
+            <div class="adress__item">
+              <div class="plus">
+                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
+<path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+</svg>
+              </div>
+              <div class="adress__txt txt bold">ул. 302 Дивизии, 30</div>
+              <div class="adress__txt">ст.Ленинградская</div>
+            </div>
+          </div>
+          <div class="header__phone phone col-md-4 col-md1-4">
+            <div class="phone__icon">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 37">
+<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAlCAYAAADBa/A+AAAB7UlEQVRYheWYTStFQRjHf16yUMpC3jZSFpJiL+UbuCLhA5BELL2EFFsvG7JxrZRSlnZIyk53ZUOkbl0voUtIRFNzaswcx9GZUyfnV8/i+c/cuf9mzjPNTM5I8wGSaqAKbz6BE+Das5cl8oECYA3o8TnkBzALTBktlskFxv5gTJAHTAIJoyWEmWs3VH90A3uW/bwDT04iZq5IaRwBcjxiUenbCdxbjkcgAww6Mxc1yoAlIJsbQXMO/UFm7hCYMNRgdAADcoTyIOZulYIQ21Gd0cMfaeBG9mxUf2Hrm6sEjg3VH6IIF9x6Rvmbi7a5sLaSBuDSUN15cVVDNJcFHgz1j8RiWcURqk3LA2PL3DOwbagBicWyFgPDSi421XKgS9GmgRYZyNPHijFSSObUk3ESqNU0x5yjpX4zF4tlfQX2tfxW0wQXinZqjBKSuYzyLXlpSRm+sGWuFFhV8l551RxVtIQsEKdIzuWJ5EdsmSsEWpVcVG6FpiGLxNFSxigasSiIrHYzE/mZpgmOFC1tjBKSuTttE/5J25Hhi3+7rCUuW0VQamyZawJ2DdUemSgv63IUzV0BQ8B6vnw8cZiX4YdNoM+ysW+vTMLcFlBvdPudDRuXGC/Ess7JP/KLeNmcCeNYriNm7k2+bI5H6k0Y+AIEum0FH5zxogAAAABJRU5ErkJggg=="/>
+            </div></svg>
+            <div class="col">
+              <div class="phone__item"><a class="tele-link bold" href="tel:+78614573105">+7 (861) 457-31-05</a>,</div>
+              <div class="phone__item"> <a class="tele-link bold" href="tel:+78614573104">+7 (861) 457-31-04</a>,</div>
+            </div>
+            <div class="col">
+              <div class="phone__item"><a class="tele-link bold" href="tel:+78614571760"> +7 (861) 457-17-60</a></div>
+              <div class="phone__item"><a class="tele-link bold" href="tel:+78614570423">+7 (861) 457-04-23</a></div>
+            </div>
+          </div>
+          <div class="header__bad-eye col-md-2 js-btn" id="bad-eye">
+            <div class="bad-eye__icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 32 32">
+<path d="M16 6c-6.979 0-13.028 4.064-16 10 2.972 5.936 9.021 10 16 10s13.027-4.064 16-10c-2.972-5.936-9.021-10-16-10zM23.889 11.303c1.88 1.199 3.473 2.805 4.67 4.697-1.197 1.891-2.79 3.498-4.67 4.697-2.362 1.507-5.090 2.303-7.889 2.303s-5.527-0.796-7.889-2.303c-1.88-1.199-3.473-2.805-4.67-4.697 1.197-1.891 2.79-3.498 4.67-4.697 0.122-0.078 0.246-0.154 0.371-0.228-0.311 0.854-0.482 1.776-0.482 2.737 0 4.418 3.582 8 8 8s8-3.582 8-8c0-0.962-0.17-1.883-0.482-2.737 0.124 0.074 0.248 0.15 0.371 0.228v0zM16 13c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+</svg>
+            </div>
+            <div class="bad-eye__txt txt bold">Версия для слабовидящих</div>
+          </div>
+        </div>
+      </div>
+      <div class="header__footer grey-footer">
+        <div class="container">
+          <div class="grey-footer__txt txt">Пн-пт: 8-00 - 16-00, перерыв 13-00 - 14-00, Суббота: 8-00 - 12-00, Воскресенье: выходной, МРТ центр: без перерыва и выходных, 8-00 - 20-00</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="container">
+          <div class="row">
+            <div class="nav__search search col-md-005">
+              <div class="search__icon icon-wrapper"><img loading="lazy" src="../img/searchw.png" alt="Поиск"></div>
+            </div>
+            <div class="nav__menu col-md-6">
+              <ul class="menu">
+                <li><a class="menu__item txt" href="#">Лечение</a>
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__item txt" href="#">Озонотерапия</a> 
+                      <ul class="sub-sub-menu first">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Неврология</a>
+                      <ul class="sub-sub-menu">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Хирургия</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Анестезиология и реаниматология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                      <ul class="sub-sub-menu">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Неврология</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Хирургия</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Неврология</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Хирургия</a>
+                      <ul class="sub-sub-menu">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Озонотерапия</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Неврология</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Хирургия</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                      <ul class="sub-sub-menu">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="menu__item txt" href="#">Диагностика</a> 
+                  <ul class="sub-menu">
+                    <li><a class="sub-menu__item txt" href="#">Диагностика2</a> 
+                      <ul class="sub-sub-menu first">
+                        <li><a class="sub-sub-menu__item" href="#">Диагностика3</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">МРТ</a>
+                      <ul class="sub-sub-menu">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">ШМРТ</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Пункция щитовидной железы</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                      <ul class="sub-sub-menu">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Неврология</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Хирургия</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Неврология</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Хирургия</a>
+                      <ul class="sub-sub-menu">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Озонотерапия</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Неврология</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Хирургия</a>
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                    </li>
+                    <li><a class="sub-menu__item txt" href="#">Акушерство и гинекология</a> 
+                      <ul class="sub-sub-menu">
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Термотерапия предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Прием уролога</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Ударно-волновая терапия</a> 
+                        </li>
+                        <li><a class="sub-sub-menu__item" href="#">Массаж предстательной железы</a> 
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a class="menu__item txt" href="#">Наши врачи</a> 
+                </li>
+                <li><a class="menu__item txt" href="#">О центре</a> 
+                </li>
+                <li><a class="menu__item txt" href="#">Контакты</a> 
+                </li>
+              </ul>
+            </div>
+            <div class="nav__buttons nav-buttons col-md-4">
+              <div class="nav-buttons__item">
+                <div class="nav-buttons__text txt bold">Мои услуги
+                  <div class="nav-buttons__badge badge bold icon-wrapper">5</div>
+                </div>
+              </div>
+              <div class="nav-buttons__item is-selected">
+                <div class="nav-buttons__text txt bold">Записаться на прием</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="burger" id="burger">
+        <div class="burger__container">
+          <div class="burger__badge">
+            <div class="badge bold icon-wrapper">5</div>
+          </div>
+          <div class="burger__body"></div>
+        </div>
+      </div>
+      <nav class="mobile-menu">
+        <div class="mobile-menu__body">
+          <ul> 
+            <li class="js__mobile-item">
+              <div class="mobile-menu__link">Лечение</div>
+            </li>
+            <li class="js__mobile-item">
+              <div class="mobile-menu__link">Диагностика</div>
+              <ul class="mobile-submenu">
+                <li class="js__mobile-submenu">
+                  <div class="mobile-submenu__link">МРТ</div>
+                  <ul class="mobile-sub-submenu">
+                    <li class="js__mobile-link"><a class="mobile-sub-submenu__link" href="#">Эндоскопия</a>
+                    </li>
+                    <li class="js__mobile-link"><a class="mobile-sub-submenu__link" href="#">Гастроскопия</a>
+                    </li>
+                    <li class="js__mobile-link"><a class="mobile-sub-submenu__link" href="#">Бронхоскопия</a>
+                    </li>
+                    <li class="js__mobile-link"><a class="mobile-sub-submenu__link" href="#">Ларингоскопия</a>
+                    </li>
+                    <li class="js__mobile-link"><a class="mobile-sub-submenu__link" href="#">Ректоскопия</a>
+                    </li>
+                    <li class="js__mobile-link"><a class="mobile-sub-submenu__link" href="#">Колоноскопия</a>
+                    </li>
+                    <li class="js__mobile-link"><a class="mobile-sub-submenu__link" href="#">Удаление полипов</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="js__mobile-submenu">
+                  <div class="mobile-submenu__link">УЗИ</div>
+                </li>
+                <li class="js__mobile-submenu">
+                  <div class="mobile-submenu__link">Функциональная диагностика</div>
+                </li>
+                <li class="js__mobile-submenu">
+                  <div class="mobile-submenu__link">Кольпоскопия</div>
+                </li>
+                <li class="js__mobile-submenu">
+                  <div class="mobile-submenu__link">Пункция щитовидной железы</div>
+                </li>
+                <li class="js__mobile-submenu">
+                  <div class="mobile-submenu__link">Лабораторные анализы</div>
+                </li>
+              </ul>
+            </li>
+            <li class="js__mobile-item">
+              <div class="mobile-menu__link">Прием врачей</div>
+            </li>
+            <li class="js__mobile-item">
+              <div class="mobile-menu__link">О центре</div>
+            </li>
+            <li class="js__mobile-item">
+              <div class="mobile-menu__link">Контакты</div>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-menu__adress"> 
+          <div class="adress__item">
+            <div class="plus">
+               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
+<path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+</svg>
+            </div>
+            <div class="adress__txt txt bold">ул. Победы, 70А</div>
+            <div class="adress__txt txt">ст.Ленинградская</div>
+          </div>
+          <div class="adress__item">
+            <div class="plus">
+               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
+<path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+</svg>
+            </div>
+            <div class="adress__txt txt bold">ул. 302 Дивизии, 30</div>
+            <div class="adress__txt">ст.Ленинградская</div>
+          </div>
+        </div>
+        <div class="mobile-menu__buttons"> 
+          <form id="search-bar">
+            <input id="search" type="search" placeholder="Поиск">
+            <button class="search-btn" type="submit"></button>
+          </form>
+          <div class="js-btn" id="bad-eye">
+            <div class="bad-eye__icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 32 32">
+<path d="M16 6c-6.979 0-13.028 4.064-16 10 2.972 5.936 9.021 10 16 10s13.027-4.064 16-10c-2.972-5.936-9.021-10-16-10zM23.889 11.303c1.88 1.199 3.473 2.805 4.67 4.697-1.197 1.891-2.79 3.498-4.67 4.697-2.362 1.507-5.090 2.303-7.889 2.303s-5.527-0.796-7.889-2.303c-1.88-1.199-3.473-2.805-4.67-4.697 1.197-1.891 2.79-3.498 4.67-4.697 0.122-0.078 0.246-0.154 0.371-0.228-0.311 0.854-0.482 1.776-0.482 2.737 0 4.418 3.582 8 8 8s8-3.582 8-8c0-0.962-0.17-1.883-0.482-2.737 0.124 0.074 0.248 0.15 0.371 0.228v0zM16 13c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+</svg>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu__phone">
+          <div class="phone__icon">
+             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 37">
+<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAlCAYAAADBa/A+AAAB7UlEQVRYheWYTStFQRjHf16yUMpC3jZSFpJiL+UbuCLhA5BELL2EFFsvG7JxrZRSlnZIyk53ZUOkbl0voUtIRFNzaswcx9GZUyfnV8/i+c/cuf9mzjPNTM5I8wGSaqAKbz6BE+Das5cl8oECYA3o8TnkBzALTBktlskFxv5gTJAHTAIJoyWEmWs3VH90A3uW/bwDT04iZq5IaRwBcjxiUenbCdxbjkcgAww6Mxc1yoAlIJsbQXMO/UFm7hCYMNRgdAADcoTyIOZulYIQ21Gd0cMfaeBG9mxUf2Hrm6sEjg3VH6IIF9x6Rvmbi7a5sLaSBuDSUN15cVVDNJcFHgz1j8RiWcURqk3LA2PL3DOwbagBicWyFgPDSi421XKgS9GmgRYZyNPHijFSSObUk3ESqNU0x5yjpX4zF4tlfQX2tfxW0wQXinZqjBKSuYzyLXlpSRm+sGWuFFhV8l551RxVtIQsEKdIzuWJ5EdsmSsEWpVcVG6FpiGLxNFSxigasSiIrHYzE/mZpgmOFC1tjBKSuTttE/5J25Hhi3+7rCUuW0VQamyZawJ2DdUemSgv63IUzV0BQ8B6vnw8cZiX4YdNoM+ysW+vTMLcFlBvdPudDRuXGC/Ess7JP/KLeNmcCeNYriNm7k2+bI5H6k0Y+AIEum0FH5zxogAAAABJRU5ErkJggg=="/>
+</svg>
+          </div>
+          <div class="col">
+            <div class="phone__item"><a class="tele-link bold" href="tel:+78614573105">+7 (861) 457-31-05</a></div>
+            <div class="phone__item"> <a class="tele-link bold" href="tel:+78614573104">+7 (861) 457-31-04</a></div>
+            <div class="phone__item"><a class="tele-link bold" href="tel:+78614571760"> +7 (861) 457-17-60</a></div>
+            <div class="phone__item"><a class="tele-link bold" href="tel:+78614570423">+7 (861) 457-04-23</a></div>
+          </div>
+        </div>
+        <div class="mobile-menu__footer grey-footer">
+          <div class="container">
+            <div class="grey-footer__txt txt">Пн-пт: 8-00 - 16-00, перерыв 13-00 - 14-00, Суббота: 8-00 - 12-00, Воскресенье: выходной, МРТ центр: без перерыва и выходных, 8-00 - 20-00</div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="page">
+      <div class="page__fpbanner fpbanner">
+        <div class="container-full">
+          <div class="fpbanner-slider swiper-container">
+            <div class="fpbanner-slider__wrapper swiper-wrapper">
+              <div class="fpbanner-slider__slide slide-1 swiper-slide">
+                <div class="slide-1__container">
+                  <div class="slide-1__col col-md-6">
+                    <div class="slide-1__item txt"> <span>Результат за </span><span class="bold">15 минут</span></div>
+                    <div class="slide-1__item txt">Все виды анализов на коронавирус</div>
+                    <div class="slide-1__item txt">COVID - 19</div>
+                    <div class="slide-1__item txt">Антитела lgM + lg G</div>
+                    <div class="slide-1__item btn" href="#">
+                      <div class="txt js-btn">Подробнее</div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M9.005 4l8 8l-8 8L7 18l6.005-6L7 6z" fill-rule="evenodd"/></svg>
+                    </div>
+                  </div>
+                  <div class="col-md-6"></div>
+                </div>
+              </div>
+              <div class="fpbanner-slider__slide swiper-slide"></div>
+              <div class="fpbanner-slider__slide swiper-slide"></div>
+            </div>
+            <div class="fpbanner-slider__prev swiper-button-prev"></div>
+            <div class="fpbanner-slider__next swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
